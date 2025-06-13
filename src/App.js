@@ -63,15 +63,15 @@ function App() {
     <div className="bg-zinc-900 min-h-screen grid grid-cols-1 md:grid-cols-5 text-white">
       {/* Sidebar */}
       <aside className="md:col-span-1 bg-zinc-800 p-6">
-        <h2 className="text-2xl font-semibold mb-6">Gemini Chat</h2>
-        <p className="text-sm text-gray-400">Built with React & Gemini API</p>
+        <h2 className="text-2xl font-semibold mb-6">Ask Sachin!</h2>
+        {/* <p className="text-sm text-gray-400">AI BOT is here!</p> */}
       </aside>
 
       {/* Main Content */}
       <main className="md:col-span-4 flex flex-col">
         {/* Header */}
         <header className="h-16 bg-zinc-800 flex items-center px-6 shadow-md">
-          <h1 className="text-xl font-bold">AI Assistance is here By Sachin Sharma!</h1>
+          <h1 className="text-xl font-bold">Developer: ssharma Phase: Testing Build 0.0.1 </h1>
         </header>
 
         {/* Chat Area */}

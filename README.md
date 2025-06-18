@@ -1,71 +1,60 @@
-# Getting Started with Create React App
+🧠 Ask Sachin – AI Chatbot
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Demo: https://ai-chat-gpt-three.vercel.app/
 
-## Available Scripts
+Ask Sachin is a smart AI chatbot built with React, Tailwind CSS, and powered by the Gemini API (v2.0-flash). It features real-time messaging, markdown support, and a smooth, responsive user interface.
 
-In the project directory, you can run:
+✨ Features
 
-### `npm start`
+⚡ Real-time AI chat using Gemini API (v2.0-flash)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+📝 Supports Markdown → HTML message formatting
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+📱 Fully responsive design with Tailwind CSS
 
-### `npm test`
+🕓 Maintains chat history and auto-scrolls on new messages
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🛡️ Includes error handling and loading indicators
 
-### `npm run build`
+🧲 Version: 0.0.2 (Testing Phase)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+🛠 Tech Stack
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Frontend: React, Tailwind CSS
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+AI API: Gemini (v2.0-flash)
 
-### `npm run eject`
+Tooling: Create React App, ESLint, Prettier
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+📦 Getting Started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Clone the repository:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+git clone https://github.com/your-username/ai-chat-gpt.git
+cd ai-chat-gpt
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Install dependencies:
 
-## Learn More
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Run the app:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+npm start
 
-### Code Splitting
+Open http://localhost:3000 to view it in your browser.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+📁 Project Structure
 
-### Analyzing the Bundle Size
+src/
+│
+├── components/        # Reusable UI components
+├── api/               # Gemini API interaction
+├── utils/             # Markdown parser, helpers
+├── App.jsx            # Main app logic
+└── index.js           # App entry point
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+📌 Notes
 
-### Making a Progressive Web App
+Gemini API key must be configured in the project (not included in the repo).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# ai-chat-gpt
+Currently in testing phase — feedback and suggestions welcome!

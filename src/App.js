@@ -9,6 +9,23 @@ function App() {
   const [loading, setLoading] = useState(false);
   const chatEndRef = useRef(null);
 
+  const formatResponse = (text) => {
+    let formattedText = text
+      .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+      .replace(/\*(.*?)\*/g, "<em>$1</em>")
+      .replace(/`(.*?)`/g, "<code>$1</code>")
+      .replace(/^\d+\.\s+(.*$)/gm, "<li>$1</li>")
+      .replace(/^-\s+(.*$)/gm, "<li>$1</li>")
+      .replace(/([^<>])\n/g, "$1<br/>")
+      .replace(/(<li>.*<\/li>)+/g, "<ul>$&</ul>")
+      .replace(
+        /(https?:\/\/[^\s]+)/g,
+        '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-blue-300 hover:underline">$1</a>'
+      );
+
+    return { __html: formattedText };
+  };
+
   const sendData = async (inputText) => {
     try {
       setLoading(true);
@@ -63,16 +80,12 @@ function App() {
     <div className="bg-zinc-900 min-h-screen grid grid-cols-1 md:grid-cols-5 text-white">
       {/* Sidebar */}
       <aside className="md:col-span-1 bg-zinc-800 p-6">
-        <h2 className="text-2xl font-semibold mb-6">Ask Sachin!</h2>
-        {/* <p className="text-sm text-gray-400">AI BOT is here!</p> */}
+        <h2 className="text-2xl font-semibold mb-6">Ask me - Free AI Chat!</h2>
+        <span>Build 0.0.2</span>
       </aside>
 
       {/* Main Content */}
       <main className="md:col-span-4 flex flex-col">
-        {/* Header */}
-        <header className="h-16 bg-zinc-800 flex items-center px-6 shadow-md">
-          <h1 className="text-xl font-bold">Developer: ssharma Phase: Testing Build 0.0.1 </h1>
-        </header>
 
         {/* Chat Area */}
         <section className="flex-1 flex flex-col justify-between p-4 md:p-6 space-y-4">
@@ -81,14 +94,15 @@ function App() {
             {result.map((msg, index) => (
               <div key={index} className="space-y-2">
                 <div className="text-right">
-                  <div className="inline-block bg-blue-600 px-4 py-2 rounded-xl text-sm">
+                  <div className="inline-block bg-zinc-900 px-4 py-2 rounded-xl text-sm">
                     {msg.user}
                   </div>
                 </div>
                 <div className="text-left">
-                  <div className="inline-block bg-green-600 px-4 py-2 rounded-xl text-sm">
-                    {msg.bot}
-                  </div>
+                  <div
+                    className="inline-block bg-zinc-500 px-4 py-2 rounded-xl text-l text-left [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:space-y-1 [&>code]:bg-zinc-800 [&>code]:px-1 [&>code]:rounded [&>strong]:font-bold [&>em]:italic"
+                    dangerouslySetInnerHTML={formatResponse(msg.bot)}
+                  />
                 </div>
               </div>
             ))}

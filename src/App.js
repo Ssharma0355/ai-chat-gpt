@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import "./App.css";
 import { IoMdSend } from "react-icons/io";
 import axios from "axios";
-
+import Link from "react-router-dom"
 function App() {
   const [text, setText] = useState("");
   const [result, setResult] = useState([]);
@@ -82,11 +82,18 @@ function App() {
       <aside className="md:col-span-1 bg-zinc-800 p-6">
         <h2 className="text-2xl font-semibold mb-6">Ask me - Free AI Chat!</h2>
         <span>Build 0.0.2</span>
+        <a
+          href="https://forms.gle/MzmSwBw8BabbkQyT6"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-2 py-2 ml-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300"
+        >
+          Feedback to developer
+        </a>
       </aside>
 
       {/* Main Content */}
       <main className="md:col-span-4 flex flex-col">
-
         {/* Chat Area */}
         <section className="flex-1 flex flex-col justify-between p-4 md:p-6 space-y-4">
           {/* Chat History */}

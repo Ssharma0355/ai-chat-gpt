@@ -57,4 +57,3 @@ src/
 
 Gemini API key must be configured in the project (not included in the repo).
 
-Currently in testing phase — feedback and suggestions welcome!
